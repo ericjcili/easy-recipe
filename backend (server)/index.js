@@ -16,8 +16,10 @@ app.use(cors());
 app.use('/posts', postRoutes);
 app.use("/user", userRouter);
 
-var MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://dbUser:pasword@cluster0.9cxdz.mongodb.net/recipe-list?retryWrites=true&w=majority';
+var MONGODB_URI = process.env.MONGODB_URI //|| 'mongodb+srv://dbUser:pasword@cluster0.9cxdz.mongodb.net/recipe-list?retryWrites=true&w=majority';
 const PORT = 3000;
+
+console.log(MONGODB_URI);
 
 console.log(PORT);
 
