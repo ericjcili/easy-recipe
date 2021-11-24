@@ -23,6 +23,10 @@ app.use(cors(corsOptions));
 app.use('/posts', postRoutes);
 app.use("/user", userRouter);
 
+app.get('/', function (req, res) {
+  res.render('index', {});
+});
+
 const MONGODB_URI = process.env.MONGODB_URI //|| 'mongodb+srv://dbUser:pasword@cluster0.9cxdz.mongodb.net/recipe-list?retryWrites=true&w=majority';
 const PORT = process.env.PORT;
 
