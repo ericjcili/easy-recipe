@@ -15,10 +15,10 @@ app.use(cors());
 app.use('/posts', postRoutes);
 app.use("/user", userRouter);
 
-const CONNECTION_URL = 'mongodb+srv://dbUser:pasword@cluster0.9cxdz.mongodb.net/recipe-list?retryWrites=true&w=majority';
+const uri = process.env.CONNECTION_URL;
 const PORT = process.env.PORT|| 3001;
 
-mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => app.listen(PORT, () => console.log(`Server Running on Port: ${PORT}`)))
   .catch((error) => console.log(`${error} did not connect`));
 
