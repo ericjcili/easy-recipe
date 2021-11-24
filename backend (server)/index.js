@@ -24,7 +24,7 @@ app.use('/posts', postRoutes);
 app.use("/user", userRouter);
 
 const MONGODB_URI = process.env.MONGODB_URI //|| 'mongodb+srv://dbUser:pasword@cluster0.9cxdz.mongodb.net/recipe-list?retryWrites=true&w=majority';
-const PORT = 3001;
+const PORT = process.env.PORT;
 
 console.log(MONGODB_URI);
 console.log(MONGODB_URI);
