@@ -3,8 +3,6 @@ import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import cors from 'cors';
 
-import MONGODB_URI from 'dotenv';
-
 import postRoutes from './routes/posts.js';
 import userRouter from "./routes/user.js";
 
@@ -18,10 +16,12 @@ app.use(cors());
 app.use('/posts', postRoutes);
 app.use("/user", userRouter);
 
-const URI = process.env.MONGODB_URI || 'mongodb+srv://dbUser:pasword@cluster0.9cxdz.mongodb.net/recipe-list?retryWrites=true&w=majority';
-const PORT = process.env.PORT|| 3001;
+var MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://dbUser:pasword@cluster0.9cxdz.mongodb.net/recipe-list?retryWrites=true&w=majority';
+const PORT = 3000;
 
-mongoose.connect(URI, { useNewUrlParser: true, useUnifiedTopology: true })
+console.log(PORT);
+
+mongoose.connect( MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => app.listen(PORT, () => console.log(`Server Running on Port: ${PORT}`)))
   .catch((error) => console.log(`${error} did not connect`));
 
