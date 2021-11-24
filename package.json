@@ -8,7 +8,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "concurrently \"cd 'backend (server)' && npm start\" \"cd 'frontend (client)' && npm start\" ",
+    "start": "concurrently \"cd 'frontend (client)' && npm start\" \"cd 'backend (server)' && npm start\" ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
