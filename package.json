@@ -1,0 +1,24 @@
+{
+  "name": "easy-recipe",
+  "version": "1.0.0",
+  "description": "## About This is a blogpost webpage that allows users to view uploaded recipes, post their own and keep a list of their favorites.",
+  "main": "index.js",
+  "dependencies": {
+    "concurrently": "^6.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "concurrently \"cd 'frontend (client)' && npm start\" \"cd 'backend (server)' && npm start\" ",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wamackie/easy-recipe.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wamackie/easy-recipe/issues"
+  },
+  "homepage": "https://github.com/wamackie/easy-recipe#readme"
+}
